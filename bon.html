@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bon de Prélèvement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="bon.css" />
+</head>
+<body>
+  <div class="a4" id="page">
+    <header>
+      <div>
+        <div class="hotel">HOTEL ARGANA</div>
+        <div>AGADIR</div>
+      </div>
+      <div class="title">BON DE PRÉLÈVEMENT</div>
+      <div>N° <b id="bonNumber">0000000</b></div>
+    </header>
+
+    <div class="meta">
+      <div>Point de Vente : <b id="pv">Inconnu</b></div>
+      <div>Date : <b id="date">--/--/----</b></div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width:16%">CODE</th>
+          <th>DESIGNATION</th>
+          <th style="width:18%">QUANTITE<br>DEMANDEE</th>
+          <th style="width:18%">QUANTITE<br>LIVREE</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <div class="sigs">
+      <div class="sigbox" id="sigChefBox"><label>CHEF DE SERVICE</label></div>
+      <div class="sigbox" id="sigCtrlBox"><label>CONTROLE</label></div>
+      <div class="sigbox"><label>ECONOME</label></div>
+    </div>
+
+    <div class="actions">
+      <button class="btn" id="printBtn">🖨 Imprimer</button>
+    </div>
+  </div>
+
+  <script src="bon.js"></script>
+</body>
+</html>

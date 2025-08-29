@@ -1,0 +1,42 @@
+:root{ --ink:#1a1f36; --line:#9aa4b2; }
+*{ box-sizing:border-box; }
+body{
+  font-family: ui-sans-serif,system-ui,Segoe UI,Roboto,Inter,Arial;
+  color:var(--ink); margin:0; background:#f6f8fb;
+}
+.a4{
+  width:210mm; margin:12mm auto; background:#fff; padding:10mm;
+  border:1px solid #cfd6e4; box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+header{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8mm; }
+.hotel{ font-weight:700; letter-spacing:.4px; }
+.title{ font-weight:800; letter-spacing:.4px; }
+.meta{ display:flex; justify-content:space-between; margin:3mm 0 5mm; }
+
+table{ width:100%; border-collapse:collapse; font-size:12px; }
+th,td{ border:1px solid var(--line); padding:5px; }
+th{ background:#f6f8fb; text-transform:uppercase; font-weight:700; font-size:11px; }
+td{ height:9mm; vertical-align:middle; }
+
+.sigs{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:6mm; margin-top:8mm; }
+.sigbox{
+  border:1px solid var(--line); height:28mm; display:flex;
+  align-items:flex-end; justify-content:center; position:relative; background:#fff;
+}
+.sigbox label{
+  position:absolute; bottom:4px; left:10px; font-size:11px; font-weight:700; color:#4d5b7c;
+}
+.sigbox img{ max-height:18mm; max-width:90%; object-fit:contain; margin-bottom:6mm; }
+
+.actions{ display:flex; gap:8px; margin-top:10mm; justify-content:flex-end; }
+.btn{
+  border:0; background:#0a4d8c; color:#fff; padding:8px 12px; border-radius:8px; cursor:pointer;
+  font-weight:700;
+}
+
+/* طباعة */
+@media print{
+  body{ background:#fff; }
+  .a4{ border:0; margin:0; width:auto; padding:0; box-shadow:none; }
+  .actions{ display:none !important; }
+}

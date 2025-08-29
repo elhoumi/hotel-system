@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Demande – Département</title>
+  <link rel="stylesheet" href="demande.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="card-head">
+        <h1 class="title">Demande – …</h1>
+        <span class="date" id="today"></span>
+      </div>
+
+      <form id="addForm" autocomplete="off" class="form">
+        <div class="grid">
+          <div class="field">
+            <label for="product">Nom du produit</label>
+            <input id="product" name="product" type="text"
+                   placeholder="Ex: 133007 BANANE"
+                   list="suggestions" required />
+            <datalist id="suggestions"></datalist>
+          </div>
+
+          <div class="field">
+            <label for="qty">Quantité</label>
+            <input id="qty" name="qty" type="text" placeholder="Ex: 5 kg ou 10" required />
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="field">
+            <label for="code">Code (auto)</label>
+            <input id="code" name="code" type="text" placeholder="CODE" />
+          </div>
+          <div class="field">
+            <label>&nbsp;</label>
+            <button type="submit" class="btn btn-primary">
+              <span class="check">✔️</span> Ajouter
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <button id="sendBtn" class="btn btn-secondary" disabled>
+        ↗️ Envoyer
+      </button>
+    </div>
+
+    <section class="list-card">
+      <div class="list-head">
+        <h2>📦 Produits demandés</h2>
+        <button id="clearBtn" class="link danger" type="button">Tout vider</button>
+      </div>
+      <ul id="items" class="items"></ul>
+      <p id="emptyHint" class="empty">Aucun produit ajouté.</p>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="demande.js"></script>
+</body>
+</html>

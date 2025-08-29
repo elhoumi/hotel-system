@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Système de gestion interne pour l'Hôtel Argana – Agadir" />
+  <meta name="theme-color" content="#0a4d8c" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Hôtel Argana – Agadir | Système de Gestion</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icons/logo (1).svg" />
+</head>
+
+<body>
+  <div class="app-container">
+    <!-- HEADER -->
+    <header class="app-header">
+      <div class="logo-container">
+        <img src="icons/logo (1).svg" alt="Hôtel Argana Logo" class="hotel-logo" />
+        <h1 class="hotel-name" data-i18n="hotelName">Hôtel Argana – Agadir</h1>
+      </div>
+
+      <!-- SEARCH CENTER -->
+      <div class="search-container">
+        <label for="searchInput" class="visually-hidden">Rechercher un service</label>
+        <input id="searchInput" type="search" placeholder="Rechercher: cuisine, bar, réception..." />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <div class="user-actions">
+        <div class="language-switcher">
+          <button id="langFr" class="lang-btn active" data-lang="fr">FR</button>
+          <button id="langAr" class="lang-btn" data-lang="ar">عربي</button>
+        </div>
+        <button id="themeToggle" class="theme-toggle" title="Basculer le thème" aria-label="Basculer le thème">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+      <div class="departments-grid">
+        <div class="department-card" data-department="cuisine-centrale">
+          <div class="card-content">
+            <i class="fas fa-utensils department-icon"></i>
+            <h3>Cuisine Centrale</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="garde-manger">
+          <div class="card-content">
+            <i class="fas fa-carrot department-icon"></i>
+            <h3>Garde-Manger</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="petit-dejeuner">
+          <div class="card-content">
+            <i class="fas fa-coffee department-icon"></i>
+            <h3>Petit Déjeuner (PDJ)</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="snack-bar">
+          <div class="card-content">
+            <i class="fas fa-hamburger department-icon"></i>
+            <h3>Snack Bar</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="bar-windsor">
+          <div class="card-content">
+            <i class="fas fa-glass-martini-alt department-icon"></i>
+            <h3>Bar Windsor</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="spagos">
+          <div class="card-content">
+            <i class="fas fa-pizza-slice department-icon"></i>
+            <h3>Spagos</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="mille-et-une-nuits">
+          <div class="card-content">
+            <i class="fas fa-moon department-icon"></i>
+            <h3>Mille et une Nuits</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="patisserie">
+          <div class="card-content">
+            <i class="fas fa-birthday-cake department-icon"></i>
+            <h3>Pâtisserie / Croissanterie</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="etages-menage">
+          <div class="card-content">
+            <i class="fas fa-broom department-icon"></i>
+            <h3>Étages / Ménage</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="cafeteria">
+          <div class="card-content">
+            <i class="fas fa-mug-hot department-icon"></i>
+            <h3>Cafétéria</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="cave">
+          <div class="card-content">
+            <i class="fas fa-wine-bottle department-icon"></i>
+            <h3>Cave</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="reception">
+          <div class="card-content">
+            <i class="fas fa-concierge-bell department-icon"></i>
+            <h3>Réception</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="comptabilite">
+          <div class="card-content">
+            <i class="fas fa-calculator department-icon"></i>
+            <h3>Comptabilité</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="administration">
+          <div class="card-content">
+            <i class="fas fa-clipboard-list department-icon"></i>
+            <h3>Administration</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+
+        <div class="department-card" data-department="direction">
+          <div class="card-content">
+            <i class="fas fa-user-tie department-icon"></i>
+            <h3>Direction</h3>
+            <button class="action-button">Faire une demande</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
